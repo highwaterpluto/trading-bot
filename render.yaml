@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: trading-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python bot_main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7180057405:AAF8hm2fMcZjFznDgVUl4u2xNCZ3polqMng
