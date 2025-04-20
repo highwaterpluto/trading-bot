@@ -103,10 +103,8 @@ async def send_funding_data(source, coin: str):
         arrow = "📈" if funding_rate > 0 else "📉"
         oi_display = f"${oi:.0f}M" if oi is not None else "Невідомо"
         msg_text = (
-            f"{arrow} *Funding Rate (24h):* `{funding_rate:.3f}%`
-"
-            f"📊 *Open Interest:* `{oi_display}`
-"
+            f"{arrow} *Funding Rate (24h):* `{funding_rate:.3f}%`\\n"
+            f"📊 *Open Interest:* `{oi_display}`\\n"
             f"💎 *Монета:* `{coin.upper()}`"
         )
         await source.message.reply_markdown(msg_text)
